@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #007f9d, #005f7d);
+  height: 100vh;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border-right: 1px solid #006d86;
+  overflow-y: auto;
+  position: fixed;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(135, 206, 235, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(135, 206, 235, 0.2);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 206, 235, 0.3);
+}
+
+.logo {
+  padding: 0 12px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #87ceeb;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.1), transparent);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.menu-item:hover {
+  background: rgba(135, 206, 235, 0.2);
+}
+
+.menu-item svg {
+  width: 20px;
+  height: 20px;
+  color: #87ceeb;
+}
+
+.menu-item span {
+  font-size: 14px;
+  color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f8fafc;
+  margin-left: 240px;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pricing-title {
+  text-align: center;
+  color: #007f9d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.pricing-toggle {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.pricing-toggle button {
+  background: white;
+  color: #007f9d;
+  border: 2px solid #007f9d;
+  padding: 10px 30px;
+  margin: 0 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pricing-toggle button.active {
+  background: #007f9d;
+  color: white;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pricing-card {
+  flex: 1;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border: 2px solid #007f9d;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.price {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.price h1 {
+  color: #007f9d;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.features li {
+  margin: 15px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.features li:before {
+  content: '✓';
+  color: #007f9d;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+}
+
+/* Feature Comparison Styles */
+.comparison-section {
+  margin-top: 60px;
+  padding: 40px 0;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-title {
+  text-align: center;
+  color: #007f9d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+  background-color: #007f9d;
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.comparison-table .fa-check {
+  color: #007f9d;
+  font-size: 1.2rem;
+}
+
+.comparison-table .fa-times {
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .comparison-section {
+    margin: 40px 20px;
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+  }
+}
+
+/* Upgrade Button Style */
+.upgrade-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.upgrade-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.upgrade-btn.basic {
+  background-color: #007f9d;
+}
+
+.upgrade-btn.basic:hover {
+  background-color: #006d86;
+}

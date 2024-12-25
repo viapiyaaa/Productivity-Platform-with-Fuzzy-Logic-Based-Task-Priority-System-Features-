@@ -1,0 +1,534 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  background: white;
+}
+
+/* Navbar styles */
+nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(135, 206, 235, 0.15);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #007f9d;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 127, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 127, 157, 0.25);
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #007f9d;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pricing Section Styles */
+.pricing-section {
+  margin-top: 120px;
+  padding: 40px 0;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-title {
+  text-align: center;
+  color: #007f9d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.pricing-toggle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-toggle button {
+  background: white;
+  color: #007f9d;
+  border: 2px solid #007f9d;
+  padding: 10px 30px;
+  margin: 0 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pricing-toggle button.active {
+  background: #007f9d;
+  color: white;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pricing-card {
+  flex: 1;
+  max-width: 400px;
+  padding: 30px;
+  border: 2px solid #007f9d;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.price {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.price h1 {
+  color: #007f9d;
+  margin: 0;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.features li {
+  margin: 15px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.features li:before {
+  content: '✓';
+  color: #007f9d;
+  position: absolute;
+  left: 0;
+}
+
+/* Comparison Section Styles */
+.comparison-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.comparison-title {
+  text-align: center;
+  color: #007f9d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.comparison-table {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 20px 30px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+  background-color: #007f9d;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.comparison-table th:first-child {
+  width: 40%;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.comparison-table td:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+.comparison-table td {
+  color: #666;
+}
+
+.comparison-table .fa-check {
+  color: #007f9d;
+  font-size: 1.2rem;
+}
+
+.comparison-table .fa-times {
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .comparison-section {
+    padding: 60px 0;
+  }
+
+  .comparison-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .comparison-table {
+    margin: 0 -20px;
+  }
+
+  .comparison-table table {
+    font-size: 14px;
+    border-radius: 0;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 15px 20px;
+  }
+
+  .comparison-table th:first-child {
+    width: 35%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Update style untuk dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-trigger i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-trigger i {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 127, 157, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 127, 157, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(8px);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #007f9d;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0, 127, 157, 0.1);
+  transform: translateX(5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin-top: 8px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .dropdown-menu a:hover {
+    transform: none;
+  }
+
+  .dropdown-trigger {
+    justify-content: center;
+  }
+}
+
+/* Level Up Section Styles */
+.level-up-section {
+  margin-top: 120px;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 120px auto 60px auto;
+}
+
+.level-up-title {
+  font-size: 2.8rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.level-up-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  color: #007f9d;
+}
+
+.feature-name {
+  font-size: 1rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.feature-status {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.feature-status.free {
+  color: #22c55e;
+}
+
+.feature-status.premium {
+  color: #007f9d;
+}
+
+@media (max-width: 768px) {
+  .level-up-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: calc(50% - 20px);
+    min-width: 140px;
+  }
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007f9d;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.faq-question h3 {
+  font-size: 1.2rem;
+  color: #007f9d;
+  font-weight: 500;
+}
+
+.faq-toggle {
+  color: #4f46e5;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle.active {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 0 20px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.faq-answer.active {
+  display: block;
+}

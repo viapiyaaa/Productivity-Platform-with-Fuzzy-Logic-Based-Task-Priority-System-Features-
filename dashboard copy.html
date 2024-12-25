@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Journey</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="Asset/logo.jpg" alt="Mindful Journey Logo" class="logo-img" />
+          <span>Mindful Journey</span>
+        </div>
+        <div class="nav-links">
+          <div class="dropdown">
+            <a href="#" class="dropdown-trigger">Resources <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="help-center.html">Help Center</a>
+              <a href="get-started.html">Get Started</a>
+            </div>
+          </div>
+          <a href="pricing copy.html">Pricing</a>
+          <a href="register.php">Log in/Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="jumbotron">
+      <div class="jumbotron-content">
+        <div class="productivity-text">
+          <h2>One Step Closer to Productivity</h2>
+          <p>Consistently organize and complete small tasks every day, so that each action brings you closer to your big goals with efficiency and focused focus</p>
+        </div>
+        <div class="productivity-image">
+          <img src="Asset/todo.png" alt="Productivity" class="image-placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <section class="jumbotron-2">
+      <div class="jumbotron-2-content">
+        <div class="productivity-image">
+          <img src="Asset/todo1.png" alt="Daily Checklist" class="image-placeholder" />
+        </div>
+        <div class="moment-text">
+          <h2>Your Daily Checklist</h2>
+          <p>Check off your tasks and enjoy the satisfaction of completing them all!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumbotron-3">
+      <div class="jumbotron-3-content">
+        <div class="feeling-text">
+          <h2>Daily Feeling</h2>
+          <p>A journey to recognize the colors of life and find happiness in every moment!</p>
+        </div>
+        <div class="productivity-image">
+          <img src="Asset/mood.png" alt="Feeling Tracks" class="image-placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <section class="jumbotron-4">
+      <div class="jumbotron-4-content">
+        <div class="productivity-image">
+          <img src="Asset/diary.png" alt="Moment Recorder" class="image-placeholder" />
+        </div>
+        <div class="moment-text">
+          <h2>Special Moment Recorder</h2>
+          <p>A magical place to store every unforgettable memory!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumbotron-5">
+      <div class="jumbotron-5-content">
+        <div class="habits-text">
+          <h2>Your Daily Habits</h2>
+          <p>Small keys that bring big changes in life, forming a more productive and meaningful daily rhythm!</p>
+        </div>
+        <div class="productivity-image">
+          <img src="Asset/dailyhabits.png" alt="Daily Habits" class="image-placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Toggle dropdown on mobile
+      document.querySelector('.dropdown-trigger').addEventListener('click', function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('active');
+        }
+      });
+    </script>
+  </body>
+</html>
